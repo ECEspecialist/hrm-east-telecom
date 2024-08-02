@@ -7,6 +7,7 @@ import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import { FaSquareCheck } from "react-icons/fa6";
 import { IoIosCheckboxOutline } from "react-icons/io";
+import Button from "../../elements/Button/Button";
 function Login() {
   const keepMeLogin = Key((state)=>state.keepMeLogin);
   const setIsAdmin = Key((state)=>state.setIsAdmin);
@@ -84,7 +85,7 @@ function Login() {
         <span className="login-checkbox" onClick={toggleKeepMeLogin}>{!keepMeLogin?<IoIosCheckboxOutline className="login-eye-icon"/>:<FaSquareCheck className="login-eye-icon"/>}
           <span>Keep me logged in for 2 days</span>
         </span>
-        <button className="" type="submit">Login</button>
+        <Button type="submit" content="Login" classname=""/>
       </form>
     </div>
   );
