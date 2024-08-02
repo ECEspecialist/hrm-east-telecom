@@ -16,59 +16,61 @@ function Sidebar() {
     <div className="sidebar">
       <div className="sidebar-top">
         <Logo />
-        <NavLink
-          to="dashboard"
-          className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "active" : ""
-          }
-        >
-          Dashboard
-        </NavLink>
-        {IsAdmin?(
-                  <NavLink
-                  to="all-employees"
-                  className={({ isActive, isPending }) =>
-                    isPending ? "pending" : isActive ? "active" : ""
-                  }
-                >
-                  All Employees
-                </NavLink>
-        ):null}
+        <nav className="sidebar-nav">
+          <NavLink
+            to="dashboard"
+            className={`navlink ${({ isActive, isPending }) =>
+              isPending ? "pending" : isActive ? "active" : ""}`
+            }
+          >
+            Dashboard
+          </NavLink>
+          {IsAdmin ? (
+            <NavLink
+              to="all-employees"
+              className={`navlink ${({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? "active" : ""}`
+              }
+            >
+              All Employees
+            </NavLink>
+          ) : null}
 
-        <NavLink
-          to="announcement"
-          className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "active" : ""
-          }
-        >
-          Announcement
-        </NavLink>
-        <NavLink
-          to="trainings"
-          className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "active" : ""
-          }
-        >
-          Trainings
-        </NavLink>
-        <NavLink
-          to="document"
-          className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "active" : ""
-          }
-        >
-          Document
-        </NavLink>
-        <NavLink
-          to="leaves"
-          className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "active" : ""
-          }
-        >
-          Leaves
-        </NavLink>
+          <NavLink
+            to="announcement"
+            className={`navlink ${({ isActive, isPending }) =>
+              isPending ? "pending" : isActive ? "active" : ""}`
+            }
+          >
+            Announcement
+          </NavLink>
+          <NavLink
+            to="trainings"
+            className={`navlink ${({ isActive, isPending }) =>
+              isPending ? "pending" : isActive ? "active" : ""}`
+            }
+          >
+            Trainings
+          </NavLink>
+          <NavLink
+            to="document"
+            className={`navlink ${({ isActive, isPending }) =>
+              isPending ? "pending" : isActive ? "active" : ""}`
+            }
+          >
+            Document
+          </NavLink>
+          <NavLink
+            to="leaves"
+            className={`navlink ${({ isActive, isPending }) =>
+              isPending ? "pending" : isActive ? "active" : ""}`
+            }
+          >
+            Leaves
+          </NavLink>
+        </nav>
       </div>
-      <button onClick={handleLeave}>Leave</button>
+      <button className="leave-button" onClick={handleLeave}>Leave</button>
     </div>
   );
 }

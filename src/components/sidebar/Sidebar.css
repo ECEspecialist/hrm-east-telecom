@@ -4,8 +4,36 @@
      position: fixed;
      display: flex;
      flex-direction: column;
-     background-color: rgba(0, 0, 255, 0.325);
+     background-color: #E0E0E0;
+     padding: 45px 8px;
+     justify-content: space-between;
+     border-right: 0.2px solid black;
 }
-.active{
-     color: red;
+.sidebar-nav{
+     display: flex;
+     flex-direction: column;
+     gap: 8px;
+}
+.navlink{
+     padding: 13px 16px;
+     color: #979393;
+     border-radius: 7px;
+     border: unset;
+     box-shadow: 0px 4px 4px 0px #00000040;
+}
+.active {
+     background: linear-gradient(to top, #851C1F, #EB3236);
+     color: white;
+}
+.leave-button{
+     max-width: 185px;
+     width: 100%;
+     padding: 8px 10px;
+     background: linear-gradient(to top, #851C1F, #EB3236);
+     border-radius: 7px;
+     border: unset;
+     color: white;
+     font-size: 16px;
+     text-align: start;
+     margin: 0px auto;
 }
