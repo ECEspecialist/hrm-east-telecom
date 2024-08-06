@@ -1,8 +1,8 @@
-import Logo from "../../elements/Logo/Logo";
+import Logo from "../../elements/logo/Logo";
 import "./Password.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import Button from "../../elements/Button/Button";
+import Button from "../../elements/button/Button";
 function Password() {
   const [email, setEmail] = useState("");
   const handleEmail = (event) => {

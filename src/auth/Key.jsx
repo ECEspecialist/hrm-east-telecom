@@ -7,6 +7,8 @@ const Key = create(
       isLogin: false,
       isAdmin: false,
       keepMeLogin: false,
+      language:"en",
+      setLanguage: (newState) => set(({ language: newState })),
       setIsLogin: (newState) => set(({ isLogin: newState })),
       setIsAdmin: (newState) => set(({ isAdmin: newState })),
       setKeepMeLogin:(newState)=> set(({ keepMeLogin: newState }))

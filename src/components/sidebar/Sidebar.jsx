@@ -1,8 +1,19 @@
 import Key from "../../auth/Key";
 import { useNavigate, NavLink } from "react-router-dom";
-import Logo from "../../elements/Logo/Logo";
+import Logo from "../../elements/logo/Logo";
+
+import { RxDashboard } from "react-icons/rx";
+import { IoIosPeople } from "react-icons/io";
+import { GrAnnounce } from "react-icons/gr";
+import { PiStudentBold } from "react-icons/pi";
+import { GrDocumentUser } from "react-icons/gr";
+import { GrDocumentText } from "react-icons/gr";
+import { MdLogout } from "react-icons/md";
+import { useTranslation } from "react-i18next";
+
 import "./Sidebar.css";
 function Sidebar() {
+  const { t } = useTranslation("global");
   const setIsLogin = Key((state) => state.setIsLogin);
   const setIsAdmin = Key((state) => state.setIsAdmin);
   const IsAdmin = Key((state) => state.isAdmin);
@@ -20,57 +31,60 @@ function Sidebar() {
           <NavLink
             to="dashboard"
             className={`navlink ${({ isActive, isPending }) =>
-              isPending ? "pending" : isActive ? "active" : ""}`
-            }
+              isPending ? "pending" : isActive ? "active" : ""}`}
           >
-            Dashboard
+            <RxDashboard className="sidebar-icon" />
+            <span>{t("sidebar.dashboard")}</span>
           </NavLink>
           {IsAdmin ? (
             <NavLink
               to="all-employees"
               className={`navlink ${({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? "active" : ""}`
-              }
+                isPending ? "pending" : isActive ? "active" : ""}`}
             >
-              All Employees
+              <IoIosPeople className="sidebar-icon" />
+              <span>{t("sidebar.all-employees")}</span>
             </NavLink>
           ) : null}
 
           <NavLink
             to="announcement"
             className={`navlink ${({ isActive, isPending }) =>
-              isPending ? "pending" : isActive ? "active" : ""}`
-            }
+              isPending ? "pending" : isActive ? "active" : ""}`}
           >
-            Announcement
+            <GrAnnounce className="sidebar-icon" />
+            <span>{t("sidebar.announcement")}</span>
           </NavLink>
           <NavLink
             to="trainings"
             className={`navlink ${({ isActive, isPending }) =>
-              isPending ? "pending" : isActive ? "active" : ""}`
-            }
+              isPending ? "pending" : isActive ? "active" : ""}`}
           >
-            Trainings
+            <PiStudentBold className="sidebar-icon" />
+            <span>{t("sidebar.training")}</span>
           </NavLink>
           <NavLink
             to="document"
             className={`navlink ${({ isActive, isPending }) =>
-              isPending ? "pending" : isActive ? "active" : ""}`
-            }
+              isPending ? "pending" : isActive ? "active" : ""}`}
           >
-            Document
+            <GrDocumentText className="sidebar-icon" />
+            <span>{t("sidebar.documents")}</span>
           </NavLink>
           <NavLink
             to="leaves"
             className={`navlink ${({ isActive, isPending }) =>
-              isPending ? "pending" : isActive ? "active" : ""}`
-            }
+              isPending ? "pending" : isActive ? "active" : ""}`}
           >
-            Leaves
+            <GrDocumentUser className="sidebar-icon" />
+            <span>{t("sidebar.leaves")}</span>
           </NavLink>
         </nav>
       </div>
-      <button className="leave-button" onClick={handleLeave}>Leave</button>
+      <button className="leave-button" onClick={handleLeave}>
+        <MdLogout className="sidebar-icon" />
+        <span>{t("sidebar.log-out")}</span>
+      </button>
     </div>
   );
 }

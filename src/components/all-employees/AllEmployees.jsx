@@ -1,10 +1,8 @@
-
-function AllEmployees(){
-               return(
-                              <div>
-                                             All Employees
-                              </div>
-               )
+import ManageUser from "../all-employee-component/manageuser/ManageUser";
+function AllEmployees() {
+  return <div>
+    <ManageUser/>
+  </div>;
 }
 
-export default AllEmployees
+export default AllEmployees;

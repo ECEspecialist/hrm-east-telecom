@@ -9,10 +9,10 @@
 }
 
 .form-container {
-     width: 400px;
+     width: 27.8%;
      display: flex;
      flex-direction: column;
-     margin-top: 54px;
+     margin-top: 3.25%;
      position: relative;
 }
 
@@ -42,7 +42,7 @@ input::placeholder {
      justify-content: space-between;
      align-items: center;
      margin-bottom: 8px;
-     margin-top: 24px;
+     margin-top: 14px;
 }
 
 .forgot-password {
@@ -52,7 +52,7 @@ input::placeholder {
 
 .password-toggle-icon {
      position: absolute;
-     top: 130px;
+     top: 120px;
      right: 17px;
      color: #4B5768;
 }

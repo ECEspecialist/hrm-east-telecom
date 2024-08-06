@@ -38,7 +38,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'all-employees',
-        element: <AllEmployees />,
+        element: <AllEmployees />
       },
       {
         path: 'announcement',

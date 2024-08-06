@@ -1,5 +1,5 @@
 import Key from "../../auth/Key";
-import Logo from "../../elements/Logo/Logo";
+import Logo from "../../elements/logo/Logo";
 import "./Login.css";
 import { useNavigate, Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -7,7 +7,7 @@ import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import { FaSquareCheck } from "react-icons/fa6";
 import { IoIosCheckboxOutline } from "react-icons/io";
-import Button from "../../elements/Button/Button";
+import Button from "../../elements/button/Button";
 function Login() {
   const keepMeLogin = Key((state)=>state.keepMeLogin);
   const setIsAdmin = Key((state)=>state.setIsAdmin);

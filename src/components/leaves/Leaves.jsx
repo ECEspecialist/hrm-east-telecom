@@ -1,8 +1,10 @@
+import { useTranslation } from "react-i18next";
 
 
 function Leaves(){
+     const { t } = useTranslation("global");
      return(
-          <div>Leaves</div>
+          <div>{t("sidebar.leaves")}</div>
      )
 }
 

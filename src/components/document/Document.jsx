@@ -1,8 +1,10 @@
+import { useTranslation } from "react-i18next";
 
 
 function Document(){
+     const { t } = useTranslation("global");
      return(
-          <div>Document</div>
+          <div>{t("sidebar.documents")}</div>
      )
 }
 

@@ -1,8 +1,9 @@
-
+import { useTranslation } from "react-i18next";
 
 function Announcement(){
+     const { t } = useTranslation("global");
      return(
-          <div>Announcement</div>
+          <div>{t("sidebar.announcement")}</div>
      )
 }
 

@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import Key from "../../auth/Key";
 import "./Home.css";
 import Header from "../../components/header/Header";
+
 function Home() {
   const isLogin = Key((state) => state.isLogin);
   const navigate = useNavigate();
