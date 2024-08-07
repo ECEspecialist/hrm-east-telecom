@@ -23,6 +23,8 @@ ul {
 
 input{
   outline: none;
+  color: black;
+  font-weight: 600;
 }
 button{
   box-shadow: 1px 5px 3px rgba(0, 0, 0, 0.3);

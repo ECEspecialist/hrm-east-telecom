@@ -1,18 +1,18 @@
-import PropsTypes from 'prop-types'
+import PropTypes from 'prop-types'
 import './button.css';
 import { MdEdit } from "react-icons/md";
 import { IoEyeOutline } from "react-icons/io5";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import Key from '../../auth/Key';
 
-const Button = ({ onDelete }) => {
+const Button = ({ onDelete, onEdit }) => {
     const isAdmin = Key((state) => state.isAdmin);
     return (
         <div className="action_state">
             <button className='button_view'><IoEyeOutline className="view_icon" /><strong>View</strong></button>
             {isAdmin ? (
                 <>
-                    <button className='button_edit'><MdEdit className="edit_icon" /><strong>Edit</strong></button>
+                    <button className='button_edit' onClick={onEdit}><MdEdit className="edit_icon" /><strong>Edit</strong></button>
                     <button className='button_delete' onClick={onDelete}><RiDeleteBin6Line className="delete_icon" /><strong>Delete</strong></button>
                 </>
             ) : null}
@@ -21,7 +21,8 @@ const Button = ({ onDelete }) => {
 };
 
 Button.propTypes={
-    onDelete:PropsTypes.string,
+    onDelete:PropTypes.func,
+    onEdit:PropTypes.func,
 }
 
 export default Button;
