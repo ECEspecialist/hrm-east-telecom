@@ -90,6 +90,20 @@
     "firstapprover": "Первый уровень утверждения",
     "secondapprover": "Второй уровень утверждения",
     "save": "Сохранить",
-    "create":"Cоздать"
+    "create": "Cоздать"
+  },
+  "button": {
+    "edit": "Редактировать",
+    "create": "Создать",
+    "save": "Сохранить",
+    "delete": "Удалить",
+    "view": "Просмотр"
+  },
+  "announcement": {
+    "announcement-title": "Объявление",
+    "announcement-admin-title": "Управление объявлениями",
+    "announcement-title-show": "Заголовок",
+    "announcement-description-show": "Описание",
+    "action": "Действие"
   }
 }

@@ -90,6 +90,20 @@
     "firstapprover": "Birinchi darajali tasdiqlovchi",
     "secondapprover": "Ikkinchi darajali tasdiqlovchi",
     "save": "Saqlash",
-    "create":"Yaratmoq"
+    "create": "Yaratmoq"
+  },
+  "button": {
+    "edit": "Tahrirlash",
+    "create": "Yaratish",
+    "save": "Saqlash",
+    "delete": "O'chirish",
+    "view": "Ko'rish"
+  },
+  "announcement": {
+    "announcement-title": "E'lon",
+    "announcement-admin-title": "E'lonlarni boshqarish",
+    "announcement-title-show": "Sarlavha",
+    "announcement-description-show": "Tavsif",
+    "action": "Harakat"
   }
 }

@@ -31,3 +31,22 @@ button{
   background: linear-gradient(to top, #851C1F, #EB3236);
   cursor: pointer;
 }
+
+:root {
+  --font-family-primary:Circe, sans-serif;
+  --color-dark-red: #EB3236;
+  --color-middle-red:#EF6E68;
+  --color-light-red:#FFEAED;
+  --color-dark-black:#000000;
+  --color-bold-black: #191D23;
+  --color-light-black:#191919;
+  --color-light-black: #4B5768;
+  --color-bold-gray: #666666;
+  --color-middle-gray: #757575;
+  --color-logo-text:#48484A;
+  --color-sidebar-icon:#424242;
+  --color-dark-blue:#1E88E5;
+  --color-light-blue:#E3F2FD;
+  --color-dark-orange:#FF9600;
+  --color-light-orange:#FFF3DE;
+}

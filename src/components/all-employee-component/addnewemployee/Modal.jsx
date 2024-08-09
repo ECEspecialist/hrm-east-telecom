@@ -12,9 +12,11 @@ const Modal = ({ isOpen, onRequestClose, children }) => {
         overlayClassName="modal-overlay"
       >
      <div className="modal-container">
-        <h2 className="modal-title">Add New Employees</h2>
         {children}
-        <button className="close-form-button" onClick={onRequestClose}>Close</button>
+        <span className="form-action-wrap">
+        {/* <button className='form-button-side' type="button">Save</button> */}
+        <button className="close-form-button" onClick={onRequestClose}>X</button>
+        </span>
      </div>
       </ReactModal>
   );

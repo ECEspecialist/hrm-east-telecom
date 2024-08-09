@@ -3,4 +3,64 @@
      font-size: 16px;
      margin-bottom: 10px;
      height: 25px;
+     border: unset;
 }
+/* Remove the border from the entire calendar container */
+.react-calendar {
+     border: none;
+     box-shadow: none;
+}
+
+/* Remove borders from individual calendar tiles (days) */
+.react-calendar__tile {
+     border: none;
+     box-shadow: none;
+}
+
+/* Remove borders from the calendar month navigation buttons */
+.react-calendar__navigation button {
+     border: none;
+     box-shadow: none;
+}
+
+/* Additional rules to remove borders from the calendar navigation */
+.react-calendar__navigation {
+     border: none;
+}
+
+/* Remove the border from the calendar itself (the table containing the dates) */
+.react-calendar__viewContainer {
+     border: none;
+     box-shadow: none;
+}
+
+/* Ensure that no borders are applied to the days */
+.react-calendar__tile {
+     border: none;
+     box-shadow: none;
+}
+
+/* Ensure no borders are applied around the week days (e.g., Mon, Tue) */
+.react-calendar__month-view__weekdays {
+     border-bottom: none;
+}
+
+/* Ensure no borders are applied to the month view */
+.react-calendar__month-view {
+     border: none;
+}
+
+/* Ensure no borders around the entire calendar view */
+.react-calendar__month-view__days {
+     border: none;
+}
+   .react-calendar {
+     border: none !important;
+     box-shadow: none !important;
+   }
+   
+   .react-calendar__tile {
+     border: none !important;
+     box-shadow: none !important;
+   }
+      

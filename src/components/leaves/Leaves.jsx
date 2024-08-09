@@ -1,10 +1,10 @@
-import { useTranslation } from "react-i18next";
-
+import ManageLeave from "../leaves-component/ManageLeaves"
 
 function Leaves(){
-     const { t } = useTranslation("global");
      return(
-          <div>{t("sidebar.leaves")}</div>
+          <div>
+               <ManageLeave/>
+          </div>
      )
 }
 

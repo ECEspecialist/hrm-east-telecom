@@ -7,7 +7,7 @@
      background-color: #E0E0E0;
      padding: 45px 8px;
      justify-content: space-between;
-     border-right: 0.2px solid black;
+     border-right: 0.1px solid rgba(0, 0, 0, 0.396);
 }
 .sidebar-nav{
      display: flex;
@@ -20,11 +20,11 @@
      color: #979393;
      border-radius: 7px;
      border: unset;
-     box-shadow: 1px 5px 3px rgba(0, 0, 0, 0.3);
      transition: 1.5s ease;
      display: flex;
      align-items: center;
      gap: 5px;
+     border: 0.1px solid rgba(0, 0, 0, 0.434);
 }
 .sidebar-icon{
      font-size: 18px;

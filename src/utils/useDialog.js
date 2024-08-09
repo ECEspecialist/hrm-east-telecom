@@ -1,20 +1,23 @@
-import { useState } from "react"
+import { useState } from "react";
 
 export const useDialog = () => {
     const [open, setOpen] = useState(false);
+    const [message, setMessage] = useState("");
 
-
-    const handleOpen = () => {
-        setOpen(true)
-    }
+    const handleOpen = (msg) => {
+        setMessage(msg);
+        setOpen(true);
+    };
 
     const handleClose = () => {
-        setOpen(false)
-    }
+        setOpen(false);
+        setMessage("");
+    };
 
     return {
         open,
+        message,
         handleOpen,
         handleClose
-    }
-}
+    };
+};

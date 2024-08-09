@@ -59,7 +59,7 @@ function Login() {
   return (
     <div className="login-container">
       <Logo />
-      <form action="/login" onSubmit={handleFormSubmit} className="form-container">
+      <form action="/login" onSubmit={handleFormSubmit} className="form-container-login">
         <label className="label-user" htmlFor="username">Username</label>
         <input value={username} onChange={handleUsername}
           id="username"

@@ -1,10 +1,8 @@
-import { useTranslation } from "react-i18next";
-
+import ManageDocuments from "../document-component/ManageDocument";
 
 function Document(){
-     const { t } = useTranslation("global");
      return(
-          <div>{t("sidebar.documents")}</div>
+          <div><ManageDocuments/></div>
      )
 }
 

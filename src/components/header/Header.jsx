@@ -1,9 +1,11 @@
 import "./Header.css";
 import { GrLanguage } from "react-icons/gr";
 import { IoMdNotificationsOutline } from "react-icons/io";
-import { CgProfile } from "react-icons/cg";
 import { useTranslation } from "react-i18next";
 import Key from "../../auth/Key";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import profileImg from "../../image/profile2.jpg";
 function Header() {
   const setLanguage = Key((state)=>state.setLanguage);
   const { i18n } = useTranslation("global");
@@ -11,8 +13,27 @@ function Header() {
     i18n.changeLanguage(event.target.value);
     setLanguage(event.target.value);
   }; 
+
+  const setIsLogin = Key((state) => state.setIsLogin);
+  const setIsAdmin = Key((state) => state.setIsAdmin);
+  const navigate = useNavigate();
+  const handleLeave = () => {
+    setIsLogin(false);
+    setIsAdmin(false);
+    navigate("/login");
+  };
+  const [closediv, setClosediv]=useState(false);
+  // const []
+  const handleopenProfile = ()=>{
+    navigate("/home/profile");
+    setClosediv(!closediv);
+  }
+  const handleProfileClick = ()=>{
+    setClosediv(!closediv);
+  }
   return (
     <div className="header">
+        <h3 className="logo-title">HRMS</h3>
       <div className="header-wrap">
         <form className="custom-select-wrapper">
           <GrLanguage className="icon-language"/>
@@ -24,7 +45,14 @@ function Header() {
           </select>
         </form>
         <IoMdNotificationsOutline className="header-icon-notification"/>
-        <CgProfile className="header-icon-profile"/>
+        <div className="profile-icon-wrap-container">
+        <img onClick={handleProfileClick} src={profileImg} className="profile-img-header" alt="profile-img" />
+          <ul className={`profile-icon-wrap-container-ul ${!closediv?"close-wrap-ul":"open-wrap-ul"}`}>
+            <li onClick={handleopenProfile} className="profile-icon-wrap-container-item">Profile</li>
+            <li onClick={handleLeave} className="profile-icon-wrap-container-item">Log Out</li>
+          </ul>
+        </div>
+
       </div>
     </div>
   );

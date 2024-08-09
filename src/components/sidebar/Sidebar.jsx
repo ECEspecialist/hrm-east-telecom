@@ -1,5 +1,5 @@
 import Key from "../../auth/Key";
-import { useNavigate, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Logo from "../../elements/logo/Logo";
 
 import { RxDashboard } from "react-icons/rx";
@@ -8,21 +8,12 @@ import { GrAnnounce } from "react-icons/gr";
 import { PiStudentBold } from "react-icons/pi";
 import { GrDocumentUser } from "react-icons/gr";
 import { GrDocumentText } from "react-icons/gr";
-import { MdLogout } from "react-icons/md";
 import { useTranslation } from "react-i18next";
 
 import "./Sidebar.css";
 function Sidebar() {
   const { t } = useTranslation("global");
-  const setIsLogin = Key((state) => state.setIsLogin);
-  const setIsAdmin = Key((state) => state.setIsAdmin);
   const IsAdmin = Key((state) => state.isAdmin);
-  const navigate = useNavigate();
-  const handleLeave = () => {
-    setIsLogin(false);
-    setIsAdmin(false);
-    navigate("/login");
-  };
   return (
     <div className="sidebar">
       <div className="sidebar-top">
@@ -81,10 +72,6 @@ function Sidebar() {
           </NavLink>
         </nav>
       </div>
-      <button className="leave-button" onClick={handleLeave}>
-        <MdLogout className="sidebar-icon" />
-        <span>{t("sidebar.log-out")}</span>
-      </button>
     </div>
   );
 }

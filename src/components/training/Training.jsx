@@ -1,9 +1,7 @@
-import { useTranslation } from "react-i18next";
-
+import ManageTraining from "../training-component/ManageTraining";
 function Training(){
-     const { t } = useTranslation("global");
      return(
-          <div>{t("sidebar.training")}</div>
+          <div><ManageTraining/></div>
      )
 }
 

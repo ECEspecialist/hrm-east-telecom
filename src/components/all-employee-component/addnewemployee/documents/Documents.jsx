@@ -12,9 +12,10 @@ const Documents = ({ next, previous, setFormData }) => {
 
   return (
     <div className='add-employee-container'>
-      <p className='form-text'>Please, upload documents.</p>
       <form className='doc-form'>
+        <label className="form-label">Upload CV</label>
         <input className='form-input' type="file" onChange={handleFileChange} />
+        <label className="form-label">Upload License</label>
         <input className='form-input' type="file" onChange={handleFileChange} />
         <div className='form-button-side-container'>
           <button className='form-button-side' type="button" onClick={previous}>Previous</button>

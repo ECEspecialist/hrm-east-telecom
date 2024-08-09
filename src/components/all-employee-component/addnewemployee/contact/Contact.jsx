@@ -15,43 +15,45 @@ const Contact = ({ previous, next, formData, setFormData }) => {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    
+
     // Check if all required fields are filled
-    const { address, phone, email} = formData.contactInfo;
-    if (!address || !phone || !email ) {
+    const { region, phoneNumber, email } = formData.contactInfo;
+    if (!region || !phoneNumber || !email) {
       alert("Please fill in all fields before proceeding.");
       return;
     }
-    
+
     next();
   };
 
   return (
     <div className='add-employee-container'>
-      <p className='form-text'>Please, fill in contact information.</p>
       <form className='personal-information-form' onSubmit={handleFormSubmit}>
+        <label className="form-label">Address</label>
         <input
           className='form-input'
           type="text"
           placeholder='Region/City/Street'
-          name='address'
-          value={formData.contactInfo.address}
+          name='region'
+          value={formData.contactInfo.region}
           onChange={handleInputChange}
         />
+        <label className="form-label">Phone Number</label>
         <input
           className='form-input'
           type="text"
           placeholder='Phone Number'
-          name='phone'
-          value={formData.contactInfo.phone}
+          name='phoneNumber'
+          value={formData.contactInfo.phoneNumber}
           onChange={handleInputChange}
         />
+        <label className='form-label'>Email</label>
         <input
           className='form-input'
           type="text"
           placeholder='Email'
           name='email'
-          value={formData.contactInfo.email}
+          value={formData.contactInfo.email || ''}
           onChange={handleInputChange}
         />
         <div className='form-button-side-container'>
@@ -64,8 +66,8 @@ const Contact = ({ previous, next, formData, setFormData }) => {
 };
 
 Contact.propTypes = {
-  previous: PropTypes.func.isRequired,
   next: PropTypes.func.isRequired,
+  previous: PropTypes.func.isRequired,
   formData: PropTypes.object.isRequired,
   setFormData: PropTypes.func.isRequired
 };

@@ -31,8 +31,8 @@ const Report = ({ previous, close, formData, setFormData }) => {
 
   return (
     <div className="add-employee-container">
-      <p className='form-text'>Please, fill in personal information.</p>
       <form className='report-form' onSubmit={handleFormSubmit}>
+        <label className="form-label">Supervisor</label>
         <input
           className='form-input'
           type="text"
@@ -41,6 +41,7 @@ const Report = ({ previous, close, formData, setFormData }) => {
           value={formData.reportInfo.supervisor}
           onChange={handleInputChange}
         />
+        <label className="form-label">First Level Approver</label>
         <input
           className='form-input'
           type="text"
@@ -49,6 +50,7 @@ const Report = ({ previous, close, formData, setFormData }) => {
           value={formData.reportInfo.firstApprover}
           onChange={handleInputChange}
         />
+        <label className="form-label">Second Level Approver</label>
         <input
           className='form-input'
           type="text"

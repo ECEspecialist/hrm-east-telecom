@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import './PersonalInformation.css';
-
-const PersonalInformation = ({ next, formData, setFormData }) => {
+const PersonalInformation = ({ next, formData, setFormData}) => {
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData(prevData => ({
@@ -22,14 +21,13 @@ const PersonalInformation = ({ next, formData, setFormData }) => {
       alert("Please fill in all fields before proceeding.");
       return;
     }
-    
-    next();
+    next()
   };
 
   return (
     <div className='add-employee-container'>
-      <p className='form-text'>Please, fill in personal information.</p>
       <form className='personal-information-form' onSubmit={handleFormSubmit}>
+        <label className="form-label">First Name</label>
         <input
           className='form-input'
           type='text'
@@ -38,7 +36,7 @@ const PersonalInformation = ({ next, formData, setFormData }) => {
           value={formData.personalInfo.firstName}
           onChange={handleInputChange}
         />
-        
+        <label className="form-label">Last Name</label>
         <input
           className='form-input'
           type='text'
@@ -47,16 +45,16 @@ const PersonalInformation = ({ next, formData, setFormData }) => {
           value={formData.personalInfo.lastName}
           onChange={handleInputChange}
         />
-        
+        <label className="form-label">Date of Birth</label>
         <input
           className='form-input'
-          type='text'
+          type='date'
           placeholder='Date of Birth'
           name='dateOfBirth'
           value={formData.personalInfo.dateOfBirth}
           onChange={handleInputChange}
         />
-        
+        <label className="form-label">Marital Status</label>
         <input
           className='form-input'
           type='text'
@@ -77,7 +75,7 @@ const PersonalInformation = ({ next, formData, setFormData }) => {
 PersonalInformation.propTypes = {
   next: PropTypes.func.isRequired,
   formData: PropTypes.object.isRequired,
-  setFormData: PropTypes.func.isRequired
+  setFormData: PropTypes.func.isRequired,
 };
 
 export default PersonalInformation;

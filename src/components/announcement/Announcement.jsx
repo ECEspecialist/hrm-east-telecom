@@ -1,9 +1,9 @@
-import { useTranslation } from "react-i18next";
-
+import ManageAnnouncement from '../announcement-component/ManageAnnouncement'
 function Announcement(){
-     const { t } = useTranslation("global");
      return(
-          <div>{t("sidebar.announcement")}</div>
+          <div>
+               <ManageAnnouncement/>
+          </div>
      )
 }
 

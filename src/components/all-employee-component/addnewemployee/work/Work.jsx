@@ -28,8 +28,11 @@ const Work = ({ next, previous, formData, setFormData }) => {
 
   return (
     <div className='add-employee-container'>
-      <p className='form-text'>Please, fill in the work information.</p>
       <form className='work-form' onSubmit={handleFormSubmit}>
+        <div className="label-wrap">
+          <label className='form-label'>Job Type</label>
+          <label className='form-label'>Duty</label>
+        </div>
         <div className='form-input-group-wrap'>
           <input
             className="form-input-group"
@@ -47,6 +50,10 @@ const Work = ({ next, previous, formData, setFormData }) => {
             value={formData.workInfo.duty}
             onChange={handleInputChange}
           />
+        </div>
+        <div className="label-wrap">
+          <label className='form-label'>Department</label>
+          <label className='form-label'>Team</label>
         </div>
         <div className='form-input-group-wrap'>
           <input
@@ -66,6 +73,10 @@ const Work = ({ next, previous, formData, setFormData }) => {
             onChange={handleInputChange}
           />
         </div>
+        <div className="label-wrap">
+          <label className='form-label'>Job Title</label>
+          <label className='form-label'>Wages</label>
+        </div>
         <div className='form-input-group-wrap'>
           <input
             className="form-input-group"
@@ -84,9 +95,13 @@ const Work = ({ next, previous, formData, setFormData }) => {
             onChange={handleInputChange}
           />
         </div>
+        <div className="label-wrap">
+          <label className='form-label'>Joined Date</label>
+          <label className='form-label'>Education</label>
+        </div>
         <div className='form-input-group-wrap'>
           <input
-            className="form-input-group"
+            className="form-input-group form-input-group-date"
             type="text"
             placeholder='Joined Date'
             name='joinedDate'
